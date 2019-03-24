@@ -4,8 +4,7 @@ AutoComplete Backend
 
 ## Prerequisites
 
-You need the to create the following two files for running it locally in the root directory
-
+You need the to create the following two files in the root directory for running it locally
 
 ## .env with the following fields
 
