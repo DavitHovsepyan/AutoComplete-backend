@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "env-cmd ./test.env jest --watch",
     "start": "node src/index.js",
     "migrate-dev": "node_modules/.bin/sequelize db:migrate",
     "migrate-staging": "node_modules/.bin/sequelize db:migrate --env=staging"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "",
   "license": "ISC",
@@ -15,12 +18,15 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
+    "env-cmd": "^8.0.2",
     "express": "^4.16.4",
     "pg": "^7.9.0",
     "request": "^2.88.0",
     "sequelize": "^5.1.0"
   },
   "devDependencies": {
-    "sequelize-cli": "^5.4.0"
+    "jest": "^24.5.0",
+    "sequelize-cli": "^5.4.0",
+    "supertest": "^4.0.2"
   }
 }

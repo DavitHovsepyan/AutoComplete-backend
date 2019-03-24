@@ -18,6 +18,15 @@ module.exports = {
         operatorsAliases: false,
         seederStorage: 'sequelize',
     },
+    test: {
+        username: DB_USER || 'postgres',
+        password: DB_PASSWORD || 'postgres',
+        database: DB || 'tidetest',
+        host: '127.0.0.1',
+        dialect: 'postgres',
+        operatorsAliases: false,
+        seederStorage: 'sequelize',
+    },
     // heroku changes db credentials from time to time, be careful
     staging: {
         username: 'pnrqlhiygjzwda',

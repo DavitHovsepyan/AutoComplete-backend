@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+const path = require('path');
 const Sequelize = require('sequelize');
 
 const environment = process.env.NODE_ENV || 'development';
@@ -10,7 +11,7 @@ const {
     host,
     dialect,
     operatorsAliases,
-} = require('../../config/database')[environment];
+} = require(`../../config/database.js`)[environment];
 
 let sequelize;
 
